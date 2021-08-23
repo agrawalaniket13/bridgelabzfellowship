@@ -1,0 +1,43 @@
+-- create database addressBook_service;
+use addressBook_service;
+-- create table addressbook(id int unsigned not null auto_increment, 
+-- 		first_name varchar(150) not null,
+--                            last_name varchar(150) not null,
+--                            address varchar(250) not null,
+-- 		city varchar(150) not null,
+--                            state varchar(150) not null,
+--                            zip varchar(150) not null,
+--                            phone_number varchar(250) not null,
+--                            email varchar(150) not null,
+--                             primary key (id));
+-- describe addressbook;
+-- insert into addressbook(first_name, last_name, address, city, state, zip, phone_number, email) values 
+-- 					('aniket','agrawal','sarthak','indore','mp','452001','9826886426','ani@gmail.com'), 
+-- 					('ani','agr','vijaynagar','bhopal','mp','452020','8440458418','abc@gmail.com'),									
+-- 					
+--                                                        ('bridgelab','institute','palasiya','mumbai','mh','452011','7548663519','bridge123@gmail.com');
+-- select * from addressbook;
+-- alter table addressbook add gender char(1) after last_name;
+-- describe addressbook;
+-- update addressbook set gender = 'M' WHERE first_name='aniket';
+-- delete from addressbook where first_name='ani';
+-- select * from addressbook where city='indore';
+-- select * from addressbook where state='mh';
+-- select * from addressbook where state='mp';
+-- select first_name, count(first_name) from addressbook group by city;
+-- insert into addressbook(first_name, last_name, address, city, state, zip, phone_number, email) values 
+-- 				('amit','agrawal','saarthak','indore','mp','452101','7546994286','amit@gmail.com'),										
+--                                                        ('ans','agrawal','residency','indore','mp','452201','1579885276','ans@gmail.com');
+-- select * from addressbook;
+-- select * from addressbook where city='indore' order by first_name asc;
+-- select * from addressbook where city='indore' order by first_name desc;
+-- alter table addressbook add type varchar(150) not null after last_name;
+-- describe addressbook;
+-- select * from addressbook;
+-- update addressbook set type = 'family' where first_name  = 'aniket'  or FirstName  = 'ans';
+-- update addressbook set type = 'friends' where first_name  = 'ani'  or FirstName  = 'bridgelab';
+-- update addressbook set type = 'profession' where first_name  = 'amit';
+-- select * from addressbook;
+-- select count(first_name) from addressbook where type = 'family' order by first_name;
+-- select count(first_name) from addressbook where type = 'friends' order by first_name;
+-- select count(first_name) from addressbook where type = 'profession' order by first_name;

@@ -1,0 +1,38 @@
+-- create database payroll_service;
+-- use payroll_service;
+-- create table employee_payroll(id int unsigned not null auto_increment, 
+-- 			name varchar(150) not null, 
+-- 			salary double not null, start date not null,
+--                             primary key (id));
+-- describe employee_payroll;
+-- insert into employee_payroll(name, salary, start) values ('Bill',100000.00,'2018-01-03'), 
+-- 			('Terisa',200000.00,'2019-11-13'),
+--                                                        ('Charlie',300000.00,'2020-05-21');
+-- select * from employee_payroll;
+-- select salary from employee_payroll where name="Bill";
+-- select * from employee_payroll where start between cast('2018-01-01' as date) and date(now());
+-- alter table employee_payroll add gender char(1) after name;
+-- describe employee_payroll;
+-- update employee_payroll set gender="F" where name="Terisa";
+-- update employee_payroll set gender = 'M' WHERE name='Bill' or name='Charlie';
+-- update employee_payroll set salary=400000.00 where name="Bill";
+-- select * from employee_payroll;
+-- select avg(salary) from employee_payroll where gender='M' group by gender;
+-- select count(name) from employee_payroll group by gender;
+-- select gender, sum(salary) from employee_payroll group by gender;
+-- alter table employee_payroll add phone_number varchar(250) after name;
+-- alter table employee_payroll add address varchar(250) after phone_number;
+-- alter table employee_payroll add department varchar(250) not null after address;
+-- alter table employee_payroll alter address set default 'TBD';
+-- describe employee_payroll;
+-- alter table employee_payroll rename column salary to basic_pay;
+-- alter table employee_payroll add deduction double not null after basic_pay;
+-- alter table employee_payroll add taxable_pay double not null after deduction;
+-- alter table employee_payroll add tax double not null after taxable_pay;
+-- alter table employee_payroll add net_pay double not null after tax;
+-- describe employee_payroll;
+-- update employee_payroll set department ='sales' where name='Terisa';
+-- select * from employee_payroll;
+-- insert into employee_payroll(name,department,gender,basic_pay,deduction,taxable_pay,tax,net_pay,start) values
+-- ('Terisa','Marketing','F',300000.00,100000.00,200000.00,500000.00,150000.00,'2018-01-03');
+-- select * from employee_payroll;
