@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <form>
+        <header class="headerContainer">
+            <h1>HTML 5 Form Input Field</h1>
+        </header>
+        <div>
+            <label for="text">Name</label>
+            <input type="text" id="text" name="text">
+            <error-output class="text-error" for="text"></error-output>
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" id="pwd" name="pwd">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input type="url" id="url" name="url">
+        </div>
+        <div>
+            <label for="num">Number</label>
+            <input type="number" id="num" name="num">
+        </div>
+        <div>
+            <label for="tel">Tele</label>
+            <input type="tel" id="tel" name="tel">
+        </div>
+        <div>
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search">
+        </div>
+        <div class="nativeDateTimePicker">
+            <label for="party">Choose a date and time</label>
+            <input type="datetime-local" id="party" name="bday">
+            <span class="validity"></span>
+        </div>
+        <div>
+            <label for="salary">Choose Salary</label>
+            <input type="range" name="salary" id="salary" min="30000" max="50000" step="100" value="40000">
+            <output class="salary-output" for="salary">40000</output>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+    <script>
+        const text = document.querySelector('#text');
+        const textError = document.querySelector('.text-error');
+        text.addEventListener('input', function(){
+            let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+            if(nameRegex.test(text.value))
+                textError.textContent = "";
+            else textError.textContent = "Name is incorrect";
+        });
+
+        const salary = document.querySelector('#salary');
+        const output = document.querySelector('.salary-output');
+        output.textContent = salary.value;
+        salary.addEventListener('input', function(){
+            output.textContent=salary.value;
+        });
+    </script>
+</body>
+</html>
