@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/new_payroll_form.css">
+    <title>Employee Payroll Form</title>
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="/assets/images/logo.png" alt="logo">
+            <div>
+                <span class="emp-text">Employee</span><br>
+                <span class="emp-text emp-payroll">Payroll</span>
+            </div>
+        </div>
+    </header>
+    <div id="formId" class="form-content">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
+            <div class="form-head">
+                Employee Payroll Form
+            </div>
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Enter Name" required>
+                <error-output class="text-error" for="text"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="profile">Profile image</label>
+                <div class="profile-radio-content">
+                    <label>
+                        <input type="radio" name="profile" id="profile1" value="../assets/profile-images/Ellipse -3.png" required>
+                        <img class="profile" id="image1" src="../assets/profile-images/Ellipse -3.png" alt="image1">
+                    </label>
+                    <label>
+                        <input type="radio" name="profile" id="profile2" value="../assets/profile-images/Ellipse 1.png" required>
+                        <img class="profile" id="image2" src="../assets/profile-images/Ellipse 1.png" alt="image2">
+                    </label>
+                    <label>
+                        <input type="radio" name="profile" id="profile3" value="../assets/profile-images/Ellipse -8.png" required>
+                        <img class="profile" id="image3" src="../assets/profile-images/Ellipse -8.png" alt="image3">
+                    </label>
+                    <label>
+                        <input type="radio" name="profile" id="profile4" value="../assets/profile-images/Ellipse -7.png" required>
+                        <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png" alt="image1">
+                    </label>
+                </div>    
+            </div>
+            <div class="row-content">
+                <label class="label text" for="gender">Gender</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" name="hr" id="hr" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input class="checkbox" type="checkbox" name="sales" id="sales" value="Sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input class="checkbox" type="checkbox" name="finance" id="finance" value="Finance">
+                    <label class="text" for="finance">Finance</label>
+                    <input class="checkbox" type="checkbox" name="engineer" id="engineer" value="Engineer">
+                    <label class="text" for="engineer">Engineer</label>
+                    <input class="checkbox" type="checkbox" name="others" id="others" value="Others">
+                    <label class="text" for="others">Others</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">Choose your salary:</label>
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="40000">
+                <output class="salary-output text" for="salary">40000</output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="startDate">Start Date</label>
+                <div>
+                    <select name="Day" id="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select name="Month" id="month">
+                        <option value="Jan">January</option>
+                        <option value="Feb">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">August</option>
+                        <option value="Sept">September</option>
+                        <option value="Oct">October</option>
+                        <option value="Nov">November</option>
+                        <option value="Dec">December</option>
+                    </select>
+                    <select name="Year" id="year">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                     </select>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea class="input" name="Notes" id="notes" placeholder="" style="height:100px"></textarea>
+            </div>
+            <div class="buttonParent">
+                <a href="#" class="resetButton button cancelButton">Cancel</a>
+                <div class="submit-reset">
+                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script defer src="../js/EmployeePayroll.js"></script>
+    <script defer src="../js/new_payroll_form.js"></script>
+</body>
+</html>

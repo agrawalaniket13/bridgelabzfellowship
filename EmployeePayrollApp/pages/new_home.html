@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/new_home.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="/assets/images/logo.png" alt="logo">
+            <div>
+                <span class="emp-text">Employee</span><br>
+                <span class="emp-text emp-payroll">Payroll</span>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <!--UC 2 start-->
+        <div class="header-contentt">
+            <div class="emp-detail-text">
+                Employee Details <div class="emp-count">2</div>
+            </div>
+            <a href="../pages/payroll_form.html" class="add-button"><img src="../assets/icons/add-24px.svg" alt="">Add user</a>
+        </div>
+        <!--UC 2 ends-->
+
+        
+        <div class="table-main">
+            <table id="table-display" class="table">
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>start Date</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td><img class="profile" src="../assets/profile-images/Ellipse -2.png" alt=""></td>
+                    <td>Aniket Agrawal</td>
+                    <td>Male</td>
+                    <td>
+                        <div class="dept-label">Sales</div>
+                        <div class="dept-label">Engineer</div>
+                    </td>
+                    <td>300000</td>
+                    <td>13 Dec 2020</td>
+                    <td>
+                        <img id="1" onclick="remove(this)" src="../assets/icons/delete-black-18dp.svg" alt="delete">
+                        <img id="1" onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="edit">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/new_home.js"></script>
+    <script src="../js/utility.js"></script>
+    <script src="../js//site_properties.js"></script>
+    <script src="../js/EmployeePayroll.js"></script>
+</body>
+</html>
