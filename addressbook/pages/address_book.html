@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/address_book_form.css">
+    <title>User Form</title>
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <!-- <img src="../assets/images/addressbook.jpeg"> -->
+            <div>
+                <span class="address-text">Address Book</span><br>
+                <!-- <span class="address-text book">Book</span> -->
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
+            <div class="form-head-content">
+                <div class="form-head">Person Address Form</div>
+                <div class="form-logo-content">
+                    <!-- <a href="../pages/homepage.html"><img src="../assets/images/cancel.jpeg" style="height: 46px;"></a> -->
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="name">Full Name</label>
+                <div class="row-input">
+                    <input class="input" type="text" name="Name" id="name" required>
+                    <error-output class="name-error" for="text"></error-output>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="address">Address</label>
+                <textarea class="input" id="address" name="Address" style="height: 40px;" required></textarea>
+                <error-output class="address-error" for="address"></error-output>
+            </div>
+            <div class="row-content-exp">
+                <div class="oneRow-content">
+                    <label class="label text" for="city">City</label>
+                    <select class="select-input" id="city" name="City" required>
+                        <option value="" >Select City</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bhopal">Bhopal</option>
+                    </select>
+                </div>
+                <div class="oneRow-content">
+                    <label class="label text" for="state">State</label>
+                    <select class="select-input" id="state" name="State" required>
+                        <option value="" >Select State</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Rajesthan">Rajesthan</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+                <div class="oneRow-content">
+                    <label class="label text" for="zip">Zip</label>
+                    <input class="input" type="text" name="Zip" id="zip" required>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="phone">Phone Number</label>
+                <input class="input" type="text" name="Phone" id="phone" required>
+                <error-output class="phone-error" for="text"></error-output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="email">Email</label>
+                <input class="input" type="text" name="Email" id="email" required>
+                <error-output class="email-error" for="text"></error-output>
+            </div>
+            <div class="submit-reset">
+                <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                <button type="button" onclick="resetForm()" class="resetButton button">Reset</button>
+                <!-- <button type="cancle" class="button cancleButton" id="cancleButton">Cancle</button> -->
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/address_book.js"></script>
+    <script src="../js/address_book_form.js"></script>
+</body>
+</html>
+
